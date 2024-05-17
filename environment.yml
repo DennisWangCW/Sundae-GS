@@ -1,4 +1,4 @@
-name: SUNDAE
+name: sundae-gs
 channels:
   - pytorch
   - conda-forge
@@ -15,3 +15,8 @@ dependencies:
   - pip:
     - submodules/diff-gaussian-rasterization
     - submodules/simple-knn
+    - open3d 
+    - wandb 
+    - tensorboard 
+    - numba
+    - lpips

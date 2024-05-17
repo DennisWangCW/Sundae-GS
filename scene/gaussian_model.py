@@ -433,7 +433,7 @@ class GaussianModel:
         if mode == "random":
             idxs = np.random.choice(num_pts, int(np.floor(num_pts * rate)), replace=False)
         if mode == "FPRC":
-            idxs = getSampledIndex(points=pts, downSampleRate=rate, weightGraph=0.5)
+            idxs = getSampledIndex(points=pts, downSampleRate=rate, weightGraph=0.5, DLLPath="/workspace/Sundae-GS/GraphDownsampling/graphScore/filtergraphv2.so")
 
         idxs = torch.from_numpy(idxs).long().cuda()
         mask[idxs] = 0
